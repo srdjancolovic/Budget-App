@@ -1,0 +1,251 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato";
+  background-image: url("img/appBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+button {
+  font-family: "Lato";
+  background: #f2aa4cff;
+}
+.app-container {
+  padding: 35px 0 30px 0;
+  width: 450px;
+  height: 720px;
+  margin: auto;
+  background-color: $appBgColor;
+  border-radius: 5px;
+  z-index: 100;
+  transition: all 0.3s ease;
+  h1 {
+    font-size: $h1FontSize;
+    text-align: center;
+  }
+  .balance {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h2 {
+      font-size: $balanceH2FontSize;
+      letter-spacing: 1px;
+    }
+    h3 {
+      font-size: $balanceH3FontSize;
+      letter-spacing: 1px;
+    }
+  }
+  .inc-exp-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+    .box {
+      width: 150px;
+      height: 80px;
+      border-radius: 5px;
+      text-align: center;
+      h4 {
+        font-size: $boxH4FontSize;
+        padding-top: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      h5 {
+        font-size: $boxH5FontSize;
+        padding-top: 10px;
+        letter-spacing: 1px;
+      }
+    }
+    .income {
+      background-color: $plusClassBg;
+    }
+    .expense {
+      background-color: $minusClassBg;
+    }
+  }
+  .list-items {
+    width: 390px;
+    height: 180px;
+    margin: auto;
+    background-color: $listItemsBgAndInputs;
+    border-radius: 5px;
+    overflow: scroll;
+    ul {
+      list-style: none;
+      .list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        margin: 0px 0 5px 0;
+        border-radius: 5px;
+        position: relative;
+        color: white;
+        transition: all 0.6s ease;
+        cursor: pointer;
+        pointer-events: all;
+        p {
+          font-size: $listItemDescFontSize;
+          letter-spacing: 1px;
+        }
+        strong {
+          font-size: $listItemAmountFontSize;
+          letter-spacing: 1px;
+        }
+        .del-btn {
+          position: absolute;
+          left: -12%;
+          top: 50%;
+          transform: translate(12%, -50%);
+          opacity: 1;
+          background: none;
+          border: none;
+          color: white;
+          font-size: $delBtnFontSize;
+          transition: all 0.6s ease;
+          cursor: pointer;
+        }
+        &:hover {
+          padding-left: 50px;
+        }
+        &:hover .del-btn {
+          left: 5%;
+          top: 50%;
+          transform: translate(-5%, -50%);
+          opacity: 1;
+        }
+      }
+      .plus {
+        background-color: $plusClassBg;
+      }
+      .minus {
+        background-color: $minusClassBg;
+      }
+    }
+  }
+  .sort-btn-hint-clear {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 35px;
+    .hint {
+      color: white;
+      font-size: $hintFontSize;
+      padding: 10px 0px;
+    }
+    .clear-all {
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px 20px;
+      letter-spacing: 1px;
+      font-size: $clearBtnFontSize;
+      text-transform: uppercase;
+      color: white;
+    }
+    .sort-btn {
+      background: none;
+      border: none;
+      font-size: $sortBtnFontSize;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  }
+  .inputs-submit {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    #form-control {
+      label {
+        font-size: $lablelsFontSize;
+        display: block;
+        padding-bottom: 5px;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      input {
+        background: $listItemsBgAndInputs;
+        display: block;
+        color: white;
+        width: 200px;
+        height: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 2px solid rgb(138, 125, 125);
+        border-radius: 5px;
+        &::placeholder {
+          text-align: center;
+          font-style: italic;
+          font-size: $placeholder;
+          color: rgb(51, 48, 48);
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .amount-currency {
+        display: flex;
+        justify-content: space-between;
+        .amount-input {
+          width: 130px;
+          padding-left: 18px;
+        }
+        select {
+          background-color: $listItemsBgAndInputs;
+          border: 2px solid rgb(138, 125, 125);
+          border-radius: 5px;
+          width: 60px;
+          height: 30px;
+          cursor: pointer;
+          font-style: italic;
+          font-weight: lighter;
+          font-size: $lablelsFontSize;
+          color: black;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    .add-btn-warning {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .warning {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        padding-bottom: 15px;
+        font-size: $lablelsFontSize;
+      }
+      .btn-add {
+        border: none;
+        padding: 12px 18px;
+        border-radius: 5px;
+        font-size: $delBtnFontSize;
+        cursor: pointer;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+  }
+}

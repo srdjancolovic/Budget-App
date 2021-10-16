@@ -1,0 +1,110 @@
+@media (max-width: 576px) {
+  .app-container {
+    padding: 15px 0 30px 0;
+    width: 340px;
+    height: 650px;
+    h1 {
+      font-size: $h1FontSizeSm;
+    }
+    .balance {
+      padding-left: 20px;
+      padding-right: 20px;
+      h2 {
+        font-size: $balanceH2FontSizeSm;
+      }
+      h3 {
+        font-size: $balanceH3FontSizeSm;
+      }
+    }
+    .inc-exp-container {
+      display: flex;
+      padding: 30px 20px;
+      .box {
+        width: 130px;
+        height: 80px;
+        h4 {
+          font-size: $boxH4FontSizeSm;
+        }
+        h5 {
+          font-size: $boxH5FontSizeSm;
+        }
+      }
+    }
+    .list-items {
+      width: 300px;
+      height: 170px;
+      ul {
+        .list-item {
+          p {
+            font-size: $listItemDescFontSizeSm;
+          }
+          strong {
+            font-size: $listItemAmountFontSizeSm;
+            letter-spacing: 1px;
+          }
+          .del-btn {
+            font-size: $delBtnFontSizeSm;
+          }
+        }
+      }
+    }
+    .sort-btn-hint-clear {
+      padding: 15px 20px;
+      .hint {
+        font-size: $hintFontSizeSm;
+        padding: 10px 0px;
+      }
+      .clear-all {
+        padding: 10px 12px;
+        font-size: $clearBtnFontSizeSm;
+      }
+      .sort-btn {
+        font-size: $sortBtnFontSizeSm;
+        color: white;
+      }
+    }
+    .inputs-submit {
+      padding: 5px 20px;
+      text-align: center;
+      #form-control {
+        label {
+          font-size: $lablelsFontSizeSm;
+          text-align: center;
+          padding-left: 5px;
+        }
+        input {
+          width: 180px;
+          height: 30px;
+          &::placeholder {
+            font-size: $placeholderSm;
+            letter-spacing: 0.5px;
+          }
+        }
+
+        .amount-currency {
+          .amount-input {
+            width: 110px;
+            padding-left: 8px;
+          }
+          select {
+            width: 60px;
+            height: 30px;
+            font-size: $lablelsFontSizeSm;
+          }
+        }
+      }
+      .add-btn-warning {
+        .warning {
+          font-size: $lablelsFontSizeSm;
+        }
+        .btn-add {
+          padding: 10px 12px;
+          font-size: $btnAddFontSizeSm;
+          cursor: pointer;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

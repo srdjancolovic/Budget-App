@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONT Lato -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/eurosign.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Budget App</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>Budget App</h1>
+      <div class="balance">
+        <h2>Balance</h2>
+        <h3 class="total-balance">$0,00</h3>
+      </div>
+      <div class="inc-exp-container">
+        <div class="box income">
+          <h4>Income</h4>
+          <h5 class="money inc">$500</h5>
+        </div>
+        <div class="box expense">
+          <h4>Outcome</h4>
+          <h5 class="money exp">$500</h5>
+        </div>
+      </div>
+
+      <div class="list-items">
+        <ul>
+          <!-- <li class="list-item plus">
+            <p class="item-desc">CASH</p>
+            <strong class="amount">0.00</strong>
+            <button class="del-btn"><i class="fas fa-trash-alt"></i></button>
+          </li>
+               -->
+        </ul>
+      </div>
+      <div class="sort-btn-hint-clear">
+        <p class="hint">Click/hover to delete</p>
+        <button class="clear-all">Clear</button>
+        <button class="sort-btn">
+          <i class="fas fa-sort-amount-down"></i>
+        </button>
+      </div>
+      <div class="inputs-submit">
+        <form id="form-control">
+          <label for="text-input" id="text-label">Transaction Name *</label>
+          <input
+            type="text"
+            id="text-input"
+            placeholder="Enter Transaction Name"
+          /><br />
+          <div class="amount-currency">
+            <div class="amount">
+              <label for="amount-input" id="amount-label">Amount *</label>
+              <input
+                type="number"
+                id="amount-input"
+                class="amount-input"
+                placeholder="Enter amount"
+              />
+            </div>
+            <div class="currency">
+              <label for="currency">Currency</label>
+              <select id="currency" onchange="updateValues()">
+                <option value="KM">KM</option>
+                <option value="€">€</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <div class="add-btn-warning">
+          <p class="warning">* Required Field</p>
+          <button class="btn-add">Submit</button>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <!-- Font Awsome -->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js "></script>
+  </body>
+</html>
